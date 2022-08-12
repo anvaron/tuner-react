@@ -1,25 +1,27 @@
 import { Link } from "react-router-dom";
+import TableRow from '@mui/material/TableRow';
+import TableCell from '@mui/material/TableCell';
 
 export default function Song({ song }) {
   return (
-    <tr>
-      <td>
+    <TableRow>
+      <TableCell >
         <Link to={`/songs/${song.id}/edit`}>Edit</Link>
-      </td>
-      <td>
+      </TableCell>
+      <TableCell>
         {song.is_favorite ? (
           <span>⭐️</span>
         ) : (
           <span>&nbsp; &nbsp; &nbsp;</span>
         )}
-      </td>
-      <td>
+      </TableCell>
+      <TableCell>
         <Link to={`/songs/${song.id}`}>{song.name}</Link>
-      </td>
-      <td>{song.artist}</td>
-      <td>
+      </TableCell>
+      <TableCell>{song.artist}</TableCell>
+      <TableCell>
         {song.time}
-      </td>
-    </tr>
+      </TableCell>
+    </TableRow>
   );
 }
