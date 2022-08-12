@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import TableRow from '@mui/material/TableRow';
 import TableCell from '@mui/material/TableCell';
+import StarIcon from '@mui/icons-material/Star';
 import EditIcon from '@mui/icons-material/Edit';
 
 export default function Song({ song }) {
@@ -11,7 +12,7 @@ export default function Song({ song }) {
       </TableCell>
       <TableCell>
         {song.is_favorite ? (
-          <span>⭐️</span>
+          <span><StarIcon /></span>
         ) : (
           <span>&nbsp; &nbsp; &nbsp;</span>
         )}

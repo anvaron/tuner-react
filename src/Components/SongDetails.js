@@ -6,8 +6,9 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
+import StarIcon from '@mui/icons-material/Star';
 import DeleteIcon from '@mui/icons-material/Delete';
-import SendIcon from '@mui/icons-material/Send';
+import EditIcon from '@mui/icons-material/Edit';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
@@ -60,7 +61,7 @@ export default function SongDetails() {
     <Container>
       <Box>
         <h2>
-          {song.is_favorite ? <span>⭐️</span> : null} {song.name} by {song.artist}
+          {song.is_favorite ? <span><StarIcon /></span> : null} {song.name} by {song.artist}
         </h2>
         <h4>Album: {song.album}</h4>
         <h4>Time: {song.time}</h4>
@@ -68,18 +69,25 @@ export default function SongDetails() {
         <ButtonGroup spacing={2} variant="contained" aria-label="outlined primary button group">
           <Button 
             variant="outlined"
+            startIcon={<ArrowBackIcon />}
             href={`/songs`}
           >
-            <ArrowBackIcon /> Back
+            Back
           </Button>
           <Button
             variant="outlined"
+            endIcon={<DeleteIcon />}
             onClick={() => handleDelete()}
           >
-            Delete <DeleteIcon />
+            Delete
           </Button>
-          <Button v
-            ariant="contained" href={`/songs/${id}/edit`}> Edit <SendIcon /></Button>
+          <Button 
+            variant="contained" 
+            endIcon={<EditIcon />} 
+            href={`/songs/${id}/edit`}
+          > 
+            Edit 
+          </Button>
         </ButtonGroup>
       </Box>
     </Container>

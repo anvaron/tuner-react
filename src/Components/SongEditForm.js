@@ -9,6 +9,8 @@ import TextField from '@mui/material/TextField';
 import Checkbox from '@mui/material/Checkbox';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
+import SendIcon from '@mui/icons-material/Send';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -142,8 +144,16 @@ export default function SongEditForm() {
         {/* </form> */}
         </Box>
         <ButtonGroup variant="contained" aria-label="outlined primary button group">
-          <Button variant="outlined" href={`/songs/${id}`}>Cancel</Button>
+          <Button 
+            variant="outlined" 
+            startIcon={<ArrowBackIcon />}
+            href={`/songs/${id}`}
+          >
+            Cancel
+          </Button>
           <Button
+            variant="contained"
+            endIcon={<SendIcon />}
             onClick={() => handleSubmit()}
           >
             Submit
