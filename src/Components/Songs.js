@@ -12,6 +12,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
+
 const API = process.env.REACT_APP_API_URL;
 
 export default function Songs() {
@@ -26,7 +27,7 @@ export default function Songs() {
   return (
     <>
     <CssBaseline enableColorScheme/>
-    <Container maxWidth="lg">
+    <Container maxWidth="xl">
     <div className="songs">
       <TableContainer component={Paper}>
         <Table  aria-label="simple table">

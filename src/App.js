@@ -13,7 +13,7 @@ import NotFound from "./Pages/NotFound";
 import NavBar from "./Components/NavBar";
 import './App.css';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <Router>
@@ -32,5 +32,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

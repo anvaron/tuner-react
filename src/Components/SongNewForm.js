@@ -1,6 +1,14 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Unstable_Grid2';
+import TextField from '@mui/material/TextField';
+import Checkbox from '@mui/material/Checkbox';
+import Button from '@mui/material/Button';
+import ButtonGroup from '@mui/material/ButtonGroup';
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -39,54 +47,90 @@ export default function SongNewForm() {
   };
 
   return (
-    <div className="form">
-      <form onSubmit={handleSubmit}>
-      <label htmlFor="name">Title:</label>
-        <input
-          id="name"
-          type="text"
-          value={song.name}
-          onChange={handleTextChange}
-          placeholder="Song's title"
-          required
-        />
-        <label htmlFor="url">Artist:</label>
-        <input
-          id="artist"
-          type="text"
-          value={song.artist}
-          onChange={handleTextChange}
-          placeholder="Artist's Name"
-          required
-        />
-        <label htmlFor="category">Album:</label>
-        <input
-          id="album"
-          type="text"
-          value={song.album}
-          placeholder="Song's Album"
-          onChange={handleTextChange}
-          required
-        />
-        <label htmlFor="category">Time:</label>
-        <input
-          id="time"
-          type="text"
-          value={song.time}
-          placeholder="Song's Time"
-          onChange={handleTextChange}
-          required
-        />
-        <label htmlFor="is_favorite">Favorite:</label>
-        <input
-          id="is_favorite"
-          type="checkbox"
-          onChange={handleCheckboxChange}
-          checked={song.is_favorite}
-        />
-        <Link to={`/songs`}><button>Cancel</button></Link>
-        <input type="submit" />
-      </form>
-    </div>
+    <Container maxWidth="md">
+      <Box
+        component="form"
+        sx={{
+          '& .MuiTextField-root': { m: 1, width: '25ch' },
+        }}
+        noValidate
+        autoComplete="off"
+      >
+        <Grid container spacing={2}>
+          <Grid xs={6}>
+            {/* <label htmlFor="name">Title:</label> */}
+            <TextField
+              fullWidth
+              id="name"
+              type="text"
+              value={song.name}
+              onChange={handleTextChange}
+              label="Song's title"
+              placeholder=""
+              required
+            />
+          </Grid>
+          <Grid xs={6}>
+            {/* <label htmlFor="url">Artist:</label> */}
+            <TextField
+              id="artist"
+              type="text"
+              value={song.artist}
+              onChange={handleTextChange}
+              label="Artist's Name"
+              placeholder="Artist's Name"
+              required
+            />
+          </Grid>
+        </Grid>
+        {/* <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}> */}
+        <Grid container spacing={2}>
+          <Grid xs={6}>
+          {/* <label htmlFor="category">Album:</label> */}
+          <TextField
+            id="album"
+            type="text"
+            value={song.album}
+            onChange={handleTextChange}
+            label="Song's Album"
+            placeholder="Song's Album"
+            required
+          /> 
+          </Grid>
+          <Grid xs={6}>
+            {/* <label htmlFor="category">Time:</label> */}
+            <TextField
+              id="time"
+              type="text"
+              value={song.time}
+              onChange={handleTextChange}
+              label="Song's Time"
+              placeholder="Song's Time"
+              required
+            />
+          </Grid>
+        </Grid>
+        <Grid container spacing={2}>
+          <Grid xs={6}>
+            <label htmlFor="is_favorite">Favorite:</label>
+            <Checkbox
+              id="is_favorite"
+              type="checkbox"
+              onChange={handleCheckboxChange}
+              checked={song.is_favorite}
+            />
+          </Grid>
+          <Grid xs={6}></Grid>
+        </Grid>
+        <ButtonGroup variant="contained" aria-label="outlined primary button group">
+          <Button variant="outlined" href={`/songs`}>Cancel</Button>
+          <Button
+            onClick={() => handleSubmit()}
+          >
+            Submit
+          </Button>
+        </ButtonGroup>
+      </Box>
+    </Container>
   );
 }
