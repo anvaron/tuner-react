@@ -1,6 +1,6 @@
 import SongEditForm from "../Components/SongEditForm";
 
-function Edit() {
+export default function Edit() {
   return (
     <div className="h-full sm:flex flex-wrap justify-center items-center text-center bg-teal-400">
       <div className="w-full header flex items-end justify-center p-4">
@@ -16,5 +16,3 @@ function Edit() {
     </div>
   );
 }
-
-export default Edit;
