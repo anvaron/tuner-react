@@ -59,7 +59,7 @@ export default function SongEditForm() {
       <form class="container max-w-2xl mx-auto shadow-md md:w-3/4 ">
         <div class="space-y-6 bg-white rounded-lg">
           <div class="items-center w-full p-4 pt-8 space-y-4 text-gray-500 md:inline-flex md:space-y-0">
-            <h2 class="max-w-sm mx-auto md:w-1/3 font-bold text-left">
+            <h2 class="max-w-sm mx-auto md:w-1/3 text-2xl font-bold text-left">
                 Artist name
             </h2>
             <div class="max-w-sm mx-auto md:w-2/3">
@@ -67,7 +67,7 @@ export default function SongEditForm() {
               <input 
                 type="text" 
                 id="artist" 
-                class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" 
+                class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-2xl text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" 
                 value={song.artist}
                 onChange={handleTextChange}
                 placeholder="Artist"
@@ -78,16 +78,16 @@ export default function SongEditForm() {
           </div>
           <hr/>
           <div class="items-center w-full p-4 space-y-4 text-gray-500 md:inline-flex md:space-y-0">
-            <h2 class="max-w-sm mx-auto md:w-1/3 font-bold text-left">
+            <h2 class="max-w-sm mx-auto md:w-1/3 text-2xl font-bold text-left">
                 Song info
             </h2>
             <div class="max-w-sm mx-auto space-y-5 md:w-2/3">
                 <div>
-                  <div class=" relative ">
+                  <div class="relative ">
                     <input 
                       type="text" 
                       id="name" 
-                      class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" 
+                      class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-2xl text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" 
                       value={song.name}
                       onChange={handleTextChange}
                       placeholder="Song name"
@@ -96,11 +96,11 @@ export default function SongEditForm() {
                   </div>
                 </div>
                 <div>
-                  <div class=" relative ">
+                  <div class="relative ">
                   <input 
                       type="text" 
                       id="album" 
-                      class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" 
+                      class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-2xl text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" 
                       value={song.album}
                       onChange={handleTextChange}
                       placeholder="Album name"
@@ -112,7 +112,7 @@ export default function SongEditForm() {
             </div>
             <hr/>
             <div class="items-center w-full p-8 space-y-4 text-gray-500 md:inline-flex md:space-y-0">
-              <h2 class="max-w-sm mx-auto md:w-4/12 font-bold text-left">
+              <h2 class="max-w-sm mx-auto md:w-4/12 text-2xl font-bold text-left">
                 Song time
               </h2>
               <div class="w-full max-w-sm pl-2 mx-auto space-y-5 md:w-3/12 md:pl-9 md:inline-flex">
@@ -120,16 +120,16 @@ export default function SongEditForm() {
                   <input 
                     type="text" 
                     id="time" 
-                    class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" 
+                    class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-2xl text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" 
                     value={song.time}
                     onChange={handleTextChange}
-                    placeholder="Song time"
+                    placeholder="00:00"
                     required
                   />
                   </div>
               </div>
               
-              <h2 class="max-w-sm mx-auto md:w-4/12 font-bold">
+              <h2 class="max-w-sm mx-auto md:w-4/12 text-2xl font-bold">
                 Favorite
               </h2>
               <div class="w-full max-w-sm pl-2 mx-auto space-y-5 md:w-3/12 md:pl-9 md:inline-flex">
@@ -149,14 +149,14 @@ export default function SongEditForm() {
               <button 
               type="button"
               onClick={() => handleClick()}
-              class="md:w-8/12 py-2 px-4 bg-gray-400 hover:bg-gray-700 focus:ring-gray-500 focus:ring-offset-gray-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-md"
+              class="md:w-8/12 py-2 px-4 bg-gray-400 hover:bg-gray-700 focus:ring-gray-500 focus:ring-offset-gray-200 text-white w-full transition ease-in duration-200 text-center text-2xl text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-md"
               >
                 Back
               </button>
               <button
                 type="button"
                 onClick={() => handleSubmit()}
-                class="py-2 px-4 bg-black hover:bg-teal-700 focus:ring-teal-500 focus:ring-offset-teal-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-md"
+                class="py-2 px-4 bg-black hover:bg-teal-700 focus:ring-teal-500 focus:ring-offset-teal-200 text-white w-full transition ease-in duration-200 text-center text-2xl text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-md"
               >
                 Submit
               </button>

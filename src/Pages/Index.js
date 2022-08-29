@@ -1,6 +1,6 @@
 import Songs from "../Components/Songs";
 
-function Index() {
+export default function Index() {
   return (
     <div className="h-full sm:flex flex-wrap justify-center items-center text-center bg-teal-400">
       <div className="w-full header flex items-end justify-center p-4">
@@ -16,5 +16,3 @@ function Index() {
     </div>
   );
 }
-
-export default Index;

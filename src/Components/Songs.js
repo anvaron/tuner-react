@@ -34,19 +34,22 @@ export default function Songs() {
                             text-center 
                             text-lg 
                             uppercase 
-                            text-3xl 
+                            text-2xl 
                             font-bold
                 ">
                   Fav
                 </th>
-                <th scope="col" class="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-center text-lg uppercase text-3xl font-bold">
+                <th scope="col" class="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-center text-lg uppercase text-2xl font-bold">
                   Song
                 </th>
-                <th scope="col" class="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-center text-lg uppercase text-3xl font-bold">
+                <th scope="col" class="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-center text-lg uppercase text-2xl font-bold">
                   Artist
                 </th>
-                <th scope="col" class="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-center text-lg uppercase text-3xl font-bold">
+                <th scope="col" class="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800 text-center text-lg uppercase text-2xl font-bold">
                   Time
+                </th>
+                <th scope="col" class="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800 text-center text-lg uppercase text-2xl font-bold">
+                  View
                 </th>
               </tr>
             </thead>

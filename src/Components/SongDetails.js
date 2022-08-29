@@ -41,24 +41,22 @@ export default function SongDetails() {
 
   return (
     <>
-
-      <div class="px-4 py-1 rounded-t sm:px-6">
+      <div class="container mx-auto px-4 py-1 rounded-t sm:px-6">
         <div class="bg-white 
-                    
                     shadow 
                     overflow-hidden 
                     sm:rounded-md">
           <ul class="divide-y divide-gray-200 text-center items-center justify-center">
             <li>
-            <div class="flex items-center justify-center">
-              <span class="block ">
+            <div class="flex flex-wrap items-center justify-center">
+              <span class="w-full block mx-auto p-6">
                 {song.is_favorite ? 
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="#4fd1c5" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#4fd1c5" className="w-10 h-10 ">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="#4fd1c5" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#4fd1c5" className="w-12 h-12 ">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                   </svg> : 
                 null} 
               </span>
-              <h2 class="block px-4 py-4 sm:px-6 text-4xl font-extrabold text-black dark:text-white sm:text-4xl">
+              <h2 class="w-full px-4 py-4 sm:px-6 text-4xl font-extrabold text-black dark:text-white sm:text-4xl">
                 <span class=" text-teal-400">
                 {song.name} <span class="font-normal text-gray-700">by</span> {song.artist}
                 </span>
