@@ -15,10 +15,10 @@ import './App.css';
 
 export default function App() {
   return (
-    <div className="App">
+    <div className="flex flex-col h-screen">
       <Router>
         <NavBar />
-        <main>
+        <main className="h-screen">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/songs" element={<Index />} />
